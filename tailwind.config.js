@@ -6,10 +6,21 @@ module.exports = {
       fontFamily: {
         sans: ["poppins", "roboto", "sans-serif"],
       },
+      colors: {
+        primary: "#0643B7",
+        "accent-variant": "#CCFFB2",
+        "dar-bg": "#14171D",
+      },
+      maxWidth: {
+        contain: "1440px",
+      },
     },
   },
   variants: {
-    extend: {},
+    extend: {
+      translate: ["active", "group-hover"],
+      scale: ["active", "group-hover"],
+    },
   },
   plugins: [],
 };
