@@ -1,3 +1,3 @@
 # Portfolio site for Davies Davies
 
-Designed and created with 💖 by [Daives Esiro](twitter.com/ojurereoluwad)
+Designed and created with 💖 by [Daives Esiro](https://twitter.com/ojurereoluwad)

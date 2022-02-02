@@ -5,6 +5,7 @@ import NavBar from "../components/Navbar/NavBar";
 export default function Home() {
   return (
     <>
+      <p className="text-emerald-700">hello</p>
       <NavBar />
       <Hero />
     </>
