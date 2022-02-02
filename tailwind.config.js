@@ -1,6 +1,8 @@
 module.exports = {
-  purge: ["./pages/**/*.tsx", "./components/**/*.tsx"],
-  darkMode: "class", // or 'media' or 'class'
+  content: [
+    "./pages/**/*.{js,ts,jsx,tsx}",
+    "./components/**/*.{js,ts,jsx,tsx}",
+  ],
   theme: {
     extend: {
       fontFamily: {
@@ -14,12 +16,6 @@ module.exports = {
       maxWidth: {
         contain: "1440px",
       },
-    },
-  },
-  variants: {
-    extend: {
-      translate: ["active", "group-hover"],
-      scale: ["active", "group-hover"],
     },
   },
   plugins: [],

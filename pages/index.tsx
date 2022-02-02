@@ -1,14 +1,12 @@
 import React from "react";
-import 'react-awesome-slider/dist/styles.css';
-import Hero from "../public/components/Navbar/Hero/Hero";
-import NavBar from "../public/components/Navbar/NavBar";
+import Hero from "../components/Navbar/Hero/Hero";
+import NavBar from "../components/Navbar/NavBar";
 
 export default function Home() {
   return (
     <>
       <NavBar />
       <Hero />
-
     </>
   );
 }
