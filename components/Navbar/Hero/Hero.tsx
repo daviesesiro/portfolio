@@ -1,18 +1,12 @@
 import React from 'react'
 import ButtonAccent from '../Button/ButtonAccent'
 import ButtonPrimary from '../Button/ButtonPrimary'
-import {
-  FaGithub,
-  FaGithubSquare,
-  FaLinkedin,
-  FaLinkedinIn,
-  FaTwitterSquare,
-} from 'react-icons/fa'
+import { FaGithubSquare, FaLinkedin, FaTwitterSquare } from 'react-icons/fa'
 import Link from 'next/link'
 
 const Hero = () => {
   return (
-    <div className="relative overflow-hidden bg-dar-bg pt-20 ">
+    <div className="relative min-h-screen overflow-hidden bg-dar-bg pt-20 ">
       <img
         src="/decor-wave.svg"
         className="fixed top-1/2 z-10 w-full  -translate-y-1/2 text-green-100 md:block"
@@ -85,9 +79,9 @@ const Socials = () => {
     },
   ]
   return (
-    <div className="flex justify-center space-x-4">
+    <div className="mb-8 flex justify-center space-x-4">
       {links.map((link, idx) => (
-        <Link href={link.href}>
+        <Link key={idx} href={link.href}>
           <a target="_blank" className="social-link">
             <link.Icon className="h-7 w-8" />
           </a>
