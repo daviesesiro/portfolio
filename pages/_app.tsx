@@ -1,5 +1,5 @@
-import Head from "next/head";
-import "../styles/globals.css";
+import Head from 'next/head'
+import '../styles/globals.css'
 
 function MyApp({ Component, pageProps }) {
   return (
@@ -9,12 +9,12 @@ function MyApp({ Component, pageProps }) {
         <meta
           name="description"
           content="My name is Davies Esiro. I build responsive, scalable and high performance products. I Bring your dream
-project to life"
+ project to life"
         />
-      </Head>{" "}
+      </Head>
       <Component {...pageProps} />
     </>
-  );
+  )
 }
 
-export default MyApp;
+export default MyApp

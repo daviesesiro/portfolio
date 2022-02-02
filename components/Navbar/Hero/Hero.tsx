@@ -1,73 +1,76 @@
-import React from "react";
-import ButtonAccent from "../Button/ButtonAccent";
-import ButtonPrimary from "../Button/ButtonPrimary";
+import React from 'react'
+import ButtonAccent from '../Button/ButtonAccent'
+import ButtonPrimary from '../Button/ButtonPrimary'
+import { AiFillTwitterCircle } from 'react-icons/ai'
+import Link from 'next/link'
 
 const Hero = () => {
   return (
-    <div className="bg-dar-bg relative overflow-hidden">
+    <div className="relative overflow-hidden bg-dar-bg pt-20 ">
       <img
         src="/decor-wave.svg"
-        className="md:block animate-spin absolute left-0 z-10 hidden"
+        className="fixed top-1/2 z-10 w-full  -translate-y-1/2 text-green-100 md:block"
         alt="decor-wave"
       />
-      <img
-        src="/decor-wave.svg"
-        className="animate-spin top-1/3 absolute right-0 z-10"
-        alt="decor-wave"
-      />
-      <img
-        src="/decor-wave.svg"
-        className="md:block animate-spin left-1/2 bottom-8 absolute z-10 hidden"
-        alt="decor-wave"
-      />
-      <section className="max-w-contain relative z-20 py-12 mx-auto">
+      <section id="#home" className="relative z-20 mx-auto max-w-contain py-16">
         <div className="relative flex justify-center">
           <img
-            src="/davies esiro.png"
-            className="md:w-40 w-28 "
+            src="/davies esiro.jpg"
+            className="w-28 rounded-full md:w-40"
             alt="Davies Esiro"
           />
-          <div className="top-2 left-1/2 border-primary border-3 absolute w-48 h-full ml-1 transform -translate-x-1/2 rounded-full" />
         </div>
         <Roles />
         <Typo />
         <ButtonGroup />
       </section>
     </div>
-  );
-};
+  )
+}
 
 const Roles = () => (
-  <div className="md:text-sm mt-4 text-xs text-center">
-    <span className="mr-5 text-gray-500">Roles {"   =>"}</span>
-    <span className="hover:text-accent-variant tracking-wide text-gray-300 duration-200 cursor-pointer">
-      Frontend, Backend and Mobile
+  <div className="mt-4 text-center text-xs md:text-sm">
+    <span className="mr-2 text-gray-500">Role{'   =>'}</span>
+    <span className="cursor-pointer tracking-wide text-gray-300 duration-200 hover:text-accent-variant">
+      Fullstack Developer
     </span>
   </div>
-);
+)
 
 const Typo = () => (
-  <div className="mt-4 text-center">
-    <h1 className="text-primary lg:text-6xl 2xl:text-7xl 2xl:leading-snug text-5xl font-bold">
+  <div className="mt-8 mb-16 text-center">
+    <h1 className="mb-4 text-5xl font-bold text-primary md:text-6xl lg:text-6xl 2xl:text-7xl 2xl:leading-snug">
       I Bring your dream
       <br />
       project to life
     </h1>
 
-    <p className="md:max-w-prose md:text-base max-w-xs mx-auto mt-4 text-sm leading-relaxed text-white">
+    <p className="mx-auto mt-8 max-w-xs text-sm leading-relaxed text-white md:max-w-prose md:text-base">
       My name is Davies Esiro. I build responsive, scalable and high performance
       products.
     </p>
   </div>
-);
+)
 
 const ButtonGroup = () => (
-  <div className=" mt-10 text-center">
+  <div className="my-10 mb-96 text-center">
     <ButtonPrimary className="w-40 px-3 py-4 text-sm">
       View CV/Resume
     </ButtonPrimary>
     <span className="inline-block w-5"></span>
     <ButtonAccent className="w-40 px-3 py-4 text-sm">Contact Me</ButtonAccent>
   </div>
-);
-export default Hero;
+)
+
+const Socials = () => {
+  return (
+    <div>
+      <Link href="https://twitter.com/ojurereoluwad">
+        <a>
+          <AiFillTwitterCircle />
+        </a>
+      </Link>
+    </div>
+  )
+}
+export default Hero
