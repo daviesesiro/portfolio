@@ -7,3 +7,9 @@
 html {
   scroll-behavior: smooth;
 }
+
+@layer components{
+  .social-link{
+    @apply text-gray-400 duration-200 hover:text-white;
+  }
+}

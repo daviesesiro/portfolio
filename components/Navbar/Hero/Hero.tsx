@@ -1,7 +1,13 @@
 import React from 'react'
 import ButtonAccent from '../Button/ButtonAccent'
 import ButtonPrimary from '../Button/ButtonPrimary'
-import { AiFillTwitterCircle } from 'react-icons/ai'
+import {
+  FaGithub,
+  FaGithubSquare,
+  FaLinkedin,
+  FaLinkedinIn,
+  FaTwitterSquare,
+} from 'react-icons/fa'
 import Link from 'next/link'
 
 const Hero = () => {
@@ -23,6 +29,7 @@ const Hero = () => {
         <Roles />
         <Typo />
         <ButtonGroup />
+        <Socials />
       </section>
     </div>
   )
@@ -53,7 +60,7 @@ const Typo = () => (
 )
 
 const ButtonGroup = () => (
-  <div className="my-10 mb-96 text-center">
+  <div className="my-10 text-center">
     <ButtonPrimary className="w-40 px-3 py-4 text-sm">
       View CV/Resume
     </ButtonPrimary>
@@ -63,13 +70,29 @@ const ButtonGroup = () => (
 )
 
 const Socials = () => {
+  const links = [
+    {
+      Icon: (props: any) => <FaTwitterSquare {...props} />,
+      href: 'https://twitter.com/ojurereoluwad',
+    },
+    {
+      Icon: (props: any) => <FaGithubSquare {...props} />,
+      href: 'https://github.com/daviesesiro',
+    },
+    {
+      Icon: (props: any) => <FaLinkedin {...props} />,
+      href: 'https://github.com/daviesesiro',
+    },
+  ]
   return (
-    <div>
-      <Link href="https://twitter.com/ojurereoluwad">
-        <a>
-          <AiFillTwitterCircle />
-        </a>
-      </Link>
+    <div className="flex justify-center space-x-4">
+      {links.map((link, idx) => (
+        <Link href={link.href}>
+          <a target="_blank" className="social-link">
+            <link.Icon className="h-7 w-8" />
+          </a>
+        </Link>
+      ))}
     </div>
   )
 }
